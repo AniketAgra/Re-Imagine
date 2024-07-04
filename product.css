@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+:root {
+  --card-width: 250px;
+  --card-height: 400px;
+  --card-transition-duration: 800ms;
+  --card-transition-easing: ease;
+  --bg-gradient-start: #d3f691;
+  --bg-gradient-end: white;
+  --button-size: 50px;
+  --button-color: #444;
+  --button-hover-color: #222;
+  --button-bg: rgba(255, 255, 255, 0.8);
+  --button-hover-bg: rgba(255, 255, 255, 1);
+  --text-primary: #161616;
+  --text-secondary: rgb(0, 102, 255);
+  --overlay-color: rgba(0, 0, 0, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#shouldersL {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+.app__bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  z-index: 1;
+}
+.app__bg__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
+  width: 180%;
+  height: 180%;
+  transition: transform 1000ms ease, opacity 1000ms ease;
+  overflow: hidden;
+}
+.app__bg__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.app__bg__image.current--image {
+  opacity: 1;
+  --image-translate-offset: 0;
+}
+.app__bg__image.previous--image, .app__bg__image.next--image {
+  opacity: 0;
+}
+.app__bg__image.previous--image {
+  --image-translate-offset: -25%;
+}
+.app__bg__image.next--image {
+  --image-translate-offset: 25%;
+}
+
+.cardList {
+  position: absolute;
+  width: calc(3 * var(--card-width));
+  height: auto;
+}
+.cardList__btn {
+  width: var(--button-size);
+  height: var(--button-size);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: var(--button-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 300ms;
+}
+.cardList__btn:hover {
+  background: var(--button-hover-bg);
+}
+.cardList__btn.btn--left {
+  left: -5%;
+}
+.cardList__btn.btn--right {
+  right: -5%;
+}
+.cardList__btn .icon {
+  width: 60%;
+  height: 60%;
+  fill: var(--button-color);
+  transition: fill 300ms;
+}
+.cardList__btn:hover .icon {
+  fill: var(--button-hover-color);
+}
+.cardList__btn .icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cardList .cards__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card {
+  --card-translateY-offset: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+  display: inline-block;
+  width: var(--card-width);
+  height: var(--card-height);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing);
+  user-select: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+  opacity: calc(1 - var(--opacity));
+}
+.card__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card__image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card.current--card {
+  --current-card-rotation-offset: 0;
+  --card-translateX-offset: 0;
+  --card-rotation-offset: var(--current-card-rotation-offset);
+  --card-scale-offset: 1.2;
+  --opacity: 0.8;
+}
+.card.previous--card {
+  --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+  --card-rotation-offset: 25deg;
+}
+.card.next--card {
+  --card-translateX-offset: calc(var(--card-width) * 1.1);
+  --card-rotation-offset: -25deg;
+}
+.card.previous--card, .card.next--card {
+  --card-scale-offset: 0.9;
+  --opacity: 0.4;
+}
+
+.infoList {
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
+  pointer-events: none;
+}
+
+.infoList .info__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.info {
+  position: relative;
+  text-align: center;
+  margin: 0 10px;
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing), opacity var(--card-transition-duration) var(--card-transition-easing);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.info.current--info {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateZ(0);
+}
+
+.info .text {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-primary);
+  transition: color var(--card-transition-duration) var(--card-transition-easing);
+}
+
+.info .name {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.info .location {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.info .location::before, .info .location::after {
+  content: "";
+  position: absolute;
+  background: var(--button-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info .location::before {
+  top: -10px;
+  width: 40px;
+  height: 3px;
+}
+
+.info .location::after {
+  bottom: -10px;
+  width: 80px;
+  height: 2px;
+}
+
+.info .description {
+  font-size: 1em;
+  font-weight: 500;
+  color: #555;
+}
+
+@media only screen and (max-width: 800px) {
+  .infoList {
+    bottom: 5%;
+  }
+
+  .info .name {
+    font-size: 1.2em;
+  }
+
+  .info .location {
+    font-size: 1em;
+  }
+
+  .info .description {
+    font-size: 0.9em;
+  }
+}
+
+
+.info.previous--info, .info.next--info {
+  opacity: 0;
+  display: none;
+}
+
+.text.name {
+  font-size: 1em;
+}
+
+
+.support {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+.support a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 150ms ease;
+}
+.support a:hover {
+  transform: scale(1.1);
+}
