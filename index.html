@@ -5,683 +5,614 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="Assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./product.css">
+
 </head>
 <body>
     <div id="main-div">
-      <!-- <header class="header">
+      <header class="header" id="navbar" >
+        <div class="modalnav"> <p>Celebrate 75 Years of Nalgene. Free Shipping on Orders of $20. </p><button onclick="closeModal()">&times;</button></div>
         <div class="logosearch">
-            <div class="logoholder" style="display: inline-block;"><img class="logo-img" src="image/image.png"
-                    alt="logo"></div>
-            <div class="searcholder">
-                <form>
-                    <div class="search">
-
-                        <input type="search" class="search-space" placeholder="Looking for something?">
-                        <span class="search-icon material-symbols-outlined">search</span>
-                    </div>
-                </form>
-
-            </div>
-            <div class="buttonholder"> 
-                <div class="yourprofile"><ul><li>Account
-                <ul id="accd">
+          <div class="logoholder" style="display: inline-block;"><img class="logo-img" src="image/image.png" alt="logo">
+          </div>
+          <div class="searcholder">
+            <form>
+              <div class="search">
+  
+                <input type="search" class="search-space" placeholder="Looking for something?">
+                <span class="search-icon material-symbols-outlined">search</span>
+              </div>
+            </form>
+  
+          </div>
+          <div class="buttonholder">
+            <div class="yourprofile">
+              <ul>
+                <li>Account
+                  <ul id="accd">
                     <li>Login</li>
                     <li>Sign-Up</li>
                     <li></li>
-                </ul></li></ul></div>
-
-                <div class="yourorders"><span class="material-symbols-outlined">
-                    shopping_cart
-                    </span><p>Your Cart</p></div>
+                  </ul>
+                </li>
+              </ul>
             </div>
+  
+            <div class="yourorders"><span class="material-symbols-outlined">
+                shopping_cart
+              </span>
+              <p>Your Cart</p>
+            </div>
+          </div>
         </div>
         <nav class="nav container">
-            <div class="nav__data">
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav__toggle-menu"></i>
-                    <i class="ri-close-line nav__toggle-close"></i>
+          <div class="nav__data">
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__toggle-menu"></i>
+              <i class="ri-close-line nav__toggle-close"></i>
+            </div>
+          </div>
+  
+  
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+  
+  
+  
+              <li class="dropdown__item">
+                <div class="nav__link dropdown__button">
+                  Water&nbsp;Bottles <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
                 </div>
-            </div>
-
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                  
-
-
-                    <li class="dropdown__item">
-                        <div class="nav__link dropdown__button">
-                    Water&nbsp;Bottles <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
-                        </div>
-
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="ri-flashlight-line"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Most Bought</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Caramel water Bottle</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Pride Gay water bottle</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Pink Water bottle</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="ri-heart-3-line"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Popular categories</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Mountain climbing water bottle</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Road trudger</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Racing water bottle</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <span class="material-symbols-outlined">
-                                            shopping_bag
-                                            </span>
-                                    </div>
-
-                                    <span class="dropdown__title">associated stuff</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">caps</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">body</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">cover</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">bag</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <span class="material-symbols-outlined">
-                                            ar_stickers
-                                            </span>
-                                    </div>
-
-                                    <span class="dropdown__title">stickers</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Neon light</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">glow-in-dark</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <li class="dropdown__item">
-                        <div class="nav__link dropdown__button">
-                            Accessories <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
-                        </div>
-
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <span class="material-symbols-outlined">
-                                            laundry
-                                            </span>
-                                    </div>
-
-                                    <span class="dropdown__title">T shirts</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Shorts</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Pool wears</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <span class="material-symbols-outlined">
-                                            military_tech
-                                            </span>
-                                    </div>
-
-                                    <span class="dropdown__title">Designs</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">classic sleek</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">japanese Flask</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Twisted neck</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <span class="material-symbols-outlined">
-                                            package_2
-                                            </span>
-                                    </div>
-
-                                    <span class="dropdown__title">Others</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Key chains</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Trendy sippers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Straws</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav__link">Kids</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav__link">Customize</a>
-                    </li>
-
-                    <li class="dropdown__item">
-                        <div class="nav__link dropdown__button">
-                            Our&nbsp;promise <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
-                        </div>
-
-                        <div class="dropdown__container">
-                            <div class="dropdown__content">
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="ri-community-line"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">About us</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">About us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Support</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Contact us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="dropdown__group">
-                                    <div class="dropdown__icon">
-                                        <i class="ri-shield-line"></i>
-                                    </div>
-
-                                    <span class="dropdown__title">Safety and quality</span>
-
-                                    <ul class="dropdown__list">
-                                        <li>
-                                            <a href="#" class="dropdown__link">Cookie settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dropdown__link">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="nav__link">sale</a>
-                    </li>
-                </ul>
-            </div>
+  
+                <div class="dropdown__container">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <i class="ri-flashlight-line"></i>
+                      </div>
+  
+                      <span class="dropdown__title">Most Bought</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Caramel water Bottle</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Pride Gay water bottle</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Pink Water bottle</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <i class="ri-heart-3-line"></i>
+                      </div>
+  
+                      <span class="dropdown__title">Popular categories</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Mountain climbing water bottle</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Road trudger</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Racing water bottle</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <span class="material-symbols-outlined">
+                          shopping_bag
+                        </span>
+                      </div>
+  
+                      <span class="dropdown__title">associated stuff</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">body</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">cover</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">bag</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <span class="material-symbols-outlined">
+                          ar_stickers
+                        </span>
+                      </div>
+  
+                      <span class="dropdown__title">stickers</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Neon light</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">glow-in-dark</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+  
+              <li class="dropdown__item">
+                <div class="nav__link dropdown__button">
+                  Accessories <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
+                </div>
+  
+                <div class="dropdown__container">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <span class="material-symbols-outlined">
+                          laundry
+                        </span>
+                      </div>
+  
+                      <span class="dropdown__title">T shirts</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Shorts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Pool wears</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <span class="material-symbols-outlined">
+                          military_tech
+                        </span>
+                      </div>
+  
+                      <span class="dropdown__title">Designs</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">classic sleek</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">japanese Flask</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Twisted neck</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <span class="material-symbols-outlined">
+                          package_2
+                        </span>
+                      </div>
+  
+                      <span class="dropdown__title">Others</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Key chains</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Trendy sippers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Straws</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+              <li>
+                <a href="#" class="nav__link">Kids</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link">Customize</a>
+              </li>
+  
+              <li class="dropdown__item">
+                <div class="nav__link dropdown__button">
+                  Our&nbsp;promise <i class="ri-arrow-down-s-line dropdown__arrow blue"></i>
+                </div>
+  
+                <div class="dropdown__container">
+                  <div class="dropdown__content">
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <i class="ri-community-line"></i>
+                      </div>
+  
+                      <span class="dropdown__title">About us</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">About us</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Support</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Contact us</a>
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="dropdown__group">
+                      <div class="dropdown__icon">
+                        <i class="ri-shield-line"></i>
+                      </div>
+  
+                      <span class="dropdown__title">Safety and quality</span>
+  
+                      <ul class="dropdown__list">
+                        <li>
+                          <a href="#" class="dropdown__link">Cookie settings</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown__link">Privacy Policy</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="nav__link">sale</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-    </header> -->
+      </header>
 
     <section class="parallax">
         
-        <img id="main" src="Assets/main.png" alt="lander image" name="mainimage" >
-        <img id="person" src="Assets/person.png">
-        <img id="bottle1" src="Assets/image (1).png">
-        <h2 id="nalgene">NALGENE</h2>
-        <img id="hill1" src="Assets/light.png" >
-        <img id="hill2" src="Assets/dark (1).png">
+      <div class="lite"><script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.9/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/2tlthYggK8H7YYXG/scene.splinecode"></spline-viewer></div>
+              
+
+        <h1 id="def-tab">NALGENE</h1>
+        <h2 id="celeb-tab">CELEBRATING 75 YEARS <br> OF NALGENE</h2>
+        <h1 id="def-mob">NALGENE</h1>
+        <h2 id="celeb-mob">CELEBRATING 75 YEARS <br> OF NALGENE</h2>
+        <p id="info-mob">Get your exclusive 75th Anniversary bottle today and a portion of the proceeds will go to our National Water Fund.</p>
+        <p id="info-tab">Get your exclusive 75th Anniversary bottle today and a portion of the proceeds will go to our National Water Fund.</p>
     </section>
-    <section class="empty"></section>
 
     <section class="aboutus">
         <div class="video" >
-            <video src="Assets/Nalgene.mp4" autoplay muted loop></video>
+            <video src="Assets/design (2).mp4" style="height: 100%;" autoplay muted loop ></video>
         </div>
         <div class="about">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </p>
+            <p>At Nalgene, we pride ourselves on crafting durable, versatile, and eco-friendly water bottles for every adventure. Since our inception, we have been committed to delivering BPA-free products that combine innovation with practicality, ensuring safe hydration for all. From hiking trails to school hallways, our reliable bottles are designed to withstand the test of time and the rigors of any environment. Join us in our journey towards a more sustainable future, one bottle at a time.</p>
             <h3>Learn More &rarr;</h3>
             <img src="Assets/bottle (3).png" id="about-image"> 
         </div>
     </section>
+
     <section class="why">
         <div class="why-nalgene">
             <h2>Why Choose Nalgene?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </p>
+            <p>At Nalgene, we are dedicated to creating reliable, eco-friendly water bottles that suit every lifestyle. Our bottles, crafted from BPA-free materials, provide safe and durable hydration solutions whether you're navigating the great outdoors, hitting the gym, or staying hydrated throughout the day. Known for their rugged durability, leak-proof designs, and temperature versatility, Nalgene bottles offer the perfect blend of functionality and style. By choosing Nalgene, you're not just opting for a high-quality water bottle—you're also making a conscious choice to support sustainable living and reduce plastic waste. Explore our range and discover why millions trust Nalgene for their hydration needs.</p>
             <h3>Learn More &rarr;</h3>
             <img src="Assets/bottle (4).png" id="why-image"> 
         </div>
         <div class="why-video" >
-            <video src="Assets/Nalgene.mp4" autoplay muted loop></video>
+          <!-- <video src="Assets/2024-07-04-12-27-15-online-video.mp4" style="height: 100%;" autoplay muted loop></video> -->
+            <video src="Assets/Young-Woman-Drinking-Water-After (2).mp4" style="height: 100%;" autoplay muted loop></video>
         </div>
     </section>
-    
-    <section id="shouldersL" >
-      <div class="app">
-        <h1 id="info-title">Featured Products</h1>
-        <div class="cardList">
-          <button class="cardList__btn btn btn--left">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-left"></use>
-              </svg>
-            </div>
-          </button>
-      
-          <div class="cards__wrapper">
-            <div class="card current--card">
-              <div class="card__image">
-                <img src="Assets/bottle1.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card next--card">
-              <div class="card__image">
-                <img src="Assets/bottle2.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card previous--card">
-              <div class="card__image">
-                <img src="Assets/bottle3.png" alt="" />
-              </div>
-            </div>
-          </div>
-      
-          <button class="cardList__btn btn btn--right">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-right"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-      
-        <div class="infoList">
 
-          <div class="info__wrapper">
-            <div class="info current--info">
-              <h1 class="text name">32oz Wide Mouth Pride Bottle - Pink</h1>
-              <!-- <h4 class="text location">Pink</h4> -->
-              <p class="text description">$12.99</p>
+    <section class="sells">
+      <h1 id="title">Bottles That Stand Out</h1>
+      <div class="bottle-container">
+        <h1>Featured Products</h1>
+        <div class="bottle-slider-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img src="Assets/single-nalgene-bottles-for-my-website-qR6G4XnOReGS8ZmCBSaFbg-PS7ETTauTBuJ-hD7wftWig.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/single-nalgene-bottles-for-my-website-qR6G4XnOReGS8ZmCBSaFbg-PS7ETTauTBuJ-hD7wftWig.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$14.99</h2>
+                    <p>32oz Wide Mouth Sustain Water Bottle - Kids</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-clean-and-minimalistic-e-commerce-website-featur-VPVV0RRiRR20m2jrWbDl4A-LFoMt0D9SPala82EJfHO8g.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-clean-and-minimalistic-e-commerce-website-featur-VPVV0RRiRR20m2jrWbDl4A-LFoMt0D9SPala82EJfHO8g.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$74.99</h2>
+                    <p>32oz Neoprene Sleeve - Set of Unique 5</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-striking-photograph-of-a-single-nalgene-bottle-s-45cc-7a5QA-1OGH4EhJcqg-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-striking-photograph-of-a-single-nalgene-bottle-s-45cc-7a5QA-1OGH4EhJcqg-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$17.99</h2>
+                    <p>32oz Insulated Sleeve Slim- Blue & Red</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-simple-yet-visually-appealing-image-featuring-a--Ilw3SIafSuuJSwsV9CQYGg-PS7ETTauTBuJ-hD7wftWig.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-simple-yet-visually-appealing-image-featuring-a--Ilw3SIafSuuJSwsV9CQYGg-PS7ETTauTBuJ-hD7wftWig.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$94.99</h2>
+                    <p>32oz Narrow Mouth Sustain Water Bottle - Set of 7</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-no-swiping">   
+                <img src="Assets/single-nalgene-bottles-for-my-website-IH1YymxLSUWWnJikFCNZag-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/single-nalgene-bottles-for-my-website-IH1YymxLSUWWnJikFCNZag-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$16.99</h2>
+                    <p>32oz Lemon printed water Bottle - Transparent</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-dozen-single-nalgene-bottles-arranged-in-a-moder-uxtHJF4MQH-Jfv6-T-8Yiw-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-dozen-single-nalgene-bottles-arranged-in-a-moder-uxtHJF4MQH-Jfv6-T-8Yiw-ig2vWGafSsy9JA4SzsTaJw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$109.99</h2>
+                    <p>32oz Narrow Mouth Sustain Water Bottle - A Dozen</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+              
             </div>
-      
-            <div class="info next--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Violet</h1>
-              <!-- <h4 class="text location">Violet</h4> -->
-              <p class="text description">$14.99</p>
-            </div>
-      
-            <div class="info previous--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Blue</h1>
-              <!-- <h4 class="text location">Blue</h4> -->
-              <p class="text description">$16.99</p>
-            </div>
-          </div>
-        </div>
-      
-      
-        <div class="app__bg">
-          <div class="app__bg__image current--image">
-            
-          </div>
-          <div class="app__bg__image next--image">
-            
-          </div>
-          <div class="app__bg__image previous--image">
-            
+
+            <div class="swiper-scrollbar"></div>
+
           </div>
         </div>
       </div>
-      
-      
-      <svg class="icons" style="display: none;">
-        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='328 112 184 256 328 400'
-                 style='fill:none;stroke:#5ef47c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='184 112 328 256 184 400'
-                 style='fill:none;stroke:#5ef47c;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-      </svg>
-     </section>
 
-     <section id="shouldersL" style="background: linear-gradient(white,#D3F691,white);">
-      <div class="app">
-        <h1 id="info-title">New Collections</h1>
-        <div class="cardList">
-          <button class="cardList__btn btn btn--left">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-left"></use>
-              </svg>
-            </div>
-          </button>
-      
-          <div class="cards__wrapper">
-            <div class="card current--card">
-              <div class="card__image">
-                <img src="Assets/bottle1.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card next--card">
-              <div class="card__image">
-                <img src="Assets/bottle2.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card previous--card">
-              <div class="card__image">
-                <img src="Assets/bottle3.png" alt="" />
-              </div>
-            </div>
-          </div>
-      
-          <button class="cardList__btn btn btn--right">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-right"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-      
-        <div class="infoList">
+      <div class="bottle-container" id="botcon2">
+        <h1>Accessories</h1>
+        <div class="bottle-slider-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
 
-          <div class="info__wrapper">
-            <div class="info current--info">
-              <h1 class="text name">32oz Wide Mouth Pride Bottle - Pink</h1>
-              <!-- <h4 class="text location">Pink</h4> -->
-              <p class="text description">$12.99</p>
-            </div>
-      
-            <div class="info next--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Violet</h1>
-              <!-- <h4 class="text location">Violet</h4> -->
-              <p class="text description">$14.99</p>
-            </div>
-      
-            <div class="info previous--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Blue</h1>
-              <!-- <h4 class="text location">Blue</h4> -->
-              <p class="text description">$16.99</p>
-            </div>
-          </div>
-        </div>
-      
-      
-        <div class="app__bg">
-          <div class="app__bg__image current--image">
-            
-          </div>
-          <div class="app__bg__image next--image">
-            
-          </div>
-          <div class="app__bg__image previous--image">
-            
+              <div class="swiper-slide">
+                <img src="Assets/a-close-up-photograph-of-a-nalgene-water-bottle-fe-dLedzs3rQO6UI59RACSoFg-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-close-up-photograph-of-a-nalgene-water-bottle-fe-dLedzs3rQO6UI59RACSoFg-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$4.99</h2>
+                    <p>Special Crafted Water Bottle Chain - Red</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-close-up-photograph-of-a-nalgene-water-bottle-ad-mW6g-ZvgT_GJHg2Dvb8j_w-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-close-up-photograph-of-a-nalgene-water-bottle-ad-mW6g-ZvgT_GJHg2Dvb8j_w-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$7.99</h2>
+                    <p>Hand Crafted Water Bottle Ribbon - Limited Edition</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-creative-shot-of-a-nalgene-water-bottle-with-var-wr6CMEVeSw2IOwo_tFnfww-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-creative-shot-of-a-nalgene-water-bottle-with-var-wr6CMEVeSw2IOwo_tFnfww-w_Z5pER5TnWklTjC0jpmxw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$6.99</h2>
+                    <p>Unique Water Bottle Holders - New Edition</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="Assets/a-close-up-photograph-of-various-nalgene-water-bot-9t8do9ncRNOLwfBro_iJSA-6wSA_dR_TSGL2W0kRl5qOw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-close-up-photograph-of-various-nalgene-water-bot-9t8do9ncRNOLwfBro_iJSA-6wSA_dR_TSGL2W0kRl5qOw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$4.99</h2>
+                    <p>Wide Mouth Strainer - Stainless steel</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-no-swiping">   
+                <img src="Assets/a-creative-close-up-image-of-a-nalgene-water-bottl-O6RHTjPhShKsvcCJZ9eo_g-kwRLCu7lRwm9xa8beV8oqw.jpeg" alt="">
+
+                <div class="bottle-content">
+                  <img src="Assets/a-creative-close-up-image-of-a-nalgene-water-bottl-O6RHTjPhShKsvcCJZ9eo_g-kwRLCu7lRwm9xa8beV8oqw.jpeg" alt="">
+                  <div class="bottle-info">
+                    <h2>$16.99</h2>
+                    <p>Special Nalgene Batch - Limited Edition</p>
+                  </div>
+                  <a href="#" class="like-btn"><i class="fa-solid fa-heart"></i></a>
+                </div>
+              </div>
+              
+
+            <div class="swiper-scrollbar"></div>
+
           </div>
         </div>
       </div>
-      
-      
-      <svg class="icons" style="display: none;">
-        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='328 112 184 256 328 400'
-                 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='184 112 328 256 184 400'
-                 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-      </svg>
-     </section>
+    </section>
 
-     <section id="shouldersL" style="background: linear-gradient(white,#D3F691);" >
-      <div class="app">
-        <h1 id="info-title">Accessories</h1>
-        <div class="cardList">
-          <button class="cardList__btn btn btn--left">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-left"></use>
-              </svg>
-            </div>
-          </button>
-      
-          <div class="cards__wrapper">
-            <div class="card current--card">
-              <div class="card__image">
-                <img src="Assets/bottle4.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card next--card">
-              <div class="card__image">
-                <img src="Assets/bottle5.png" alt="" />
-              </div>
-            </div>
-      
-            <div class="card previous--card">
-              <div class="card__image">
-                <img src="Assets/bottle6.png" alt="" />
-              </div>
-            </div>
-          </div>
-      
-          <button class="cardList__btn btn btn--right">
-            <div class="icon">
-              <svg>
-                <use xlink:href="#arrow-right"></use>
-              </svg>
-            </div>
-          </button>
-        </div>
-      
-        <div class="infoList">
-
-          <div class="info__wrapper">
-            <div class="info current--info">
-              <h1 class="text name">32oz Wide Mouth Pride Bottle - Pink</h1>
-              <!-- <h4 class="text location">Pink</h4> -->
-              <p class="text description">$12.99</p>
-            </div>
-      
-            <div class="info next--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Violet</h1>
-              <!-- <h4 class="text location">Violet</h4> -->
-              <p class="text description">$14.99</p>
-            </div>
-      
-            <div class="info previous--info">
-              <h1 class="text name">32oz Wide Mouth Sustain Water Bottle - Blue</h1>
-              <!-- <h4 class="text location">Blue</h4> -->
-              <p class="text description">$16.99</p>
-            </div>
-          </div>
-        </div>
-      
-      
-        <div class="app__bg">
-          <div class="app__bg__image current--image">
-            
-          </div>
-          <div class="app__bg__image next--image">
-            
-          </div>
-          <div class="app__bg__image previous--image">
-            
-          </div>
-        </div>
-      </div>
-      
-      
-      <svg class="icons" style="display: none;">
-        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='328 112 184 256 328 400'
-                 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-          <polyline points='184 112 328 256 184 400'
-                 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-        </symbol>
-      </svg>
-     </section>
-
-     <section class="category">
+    <section class="category">
       <h1>Shop By Category</h1>
       <div class="category-container">
-          <div class="cat" id="categories1">
-              <a href="#">
-                  <img src="Assets/Screenshot 2024-07-01 125218.png" alt="Outdoors Image">
-                  <video muted loop class="hover-video">
-                      <source src="Assets/Mature-Man-Taking-A-Break-During.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-              </a>
-              <p class="cat-description">Outdoors</p>
-          </div>
-          <div class="cat" id="categories2">
-              <a href="#">
-                  <img src="Assets/Screenshot 2024-07-01 125350.png" alt="Fitness Image">
-                  <video muted loop class="hover-video">
-                      <source src="Assets/2024-07-04-12-27-15-online-video.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-              </a>
-              <p class="cat-description">Fitness</p>
-          </div>
-          <div class="cat" id="categories3">
-              <a href="#">
-                  <img src="Assets/Screenshot 2024-07-01 125402.png" alt="Kids Water Bottles Image">
-                  <video muted loop class="hover-video">
-                      <source src="Assets/Thirsty-Little-Child-Drinks-Clea.mp4 " type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-              </a>
-              <p class="cat-description">Kids Water Bottles</p>
-          </div>
+        <div class="slider123">
+        
+          <div class="list123">
+            <div class="item123 active123">
+                <img src="image/img2.jpg" alt="Outdoors Image">
+                <div class="content123">
+                    <p>#TrailReady</p>
+                    <h2>OUTDOORS</h2>
+                    <p>
+                      "Stay Hydrated, Stay Adventurous 
+                      – Discover Our Outdoor Water Bottles for Every Trail!"
+                    </p>
+                </div>
+            </div>
+            <div class="item123">
+                <img src="Assets/gym-workout-image-for-website-Qbt3zmwZRI-JcqQ_8d7YqQ-Fndm9JYcQu2Rsd8K-ht6YQ.jpeg" alt="Fitness Image">
+                <div class="content123">
+                    <p>#GymGear</p>
+                    <h2>FITNESS</h2>
+                    <p>
+                      "Quench your fitness thirst with our high-performance water bottles,
+                       built for every workout!"
+                    </p>
+                </div>
+            </div>
+            <div class="item123">
+                <img src="Assets/kid-image-for-website-having-water-bottle-in-hand-JNMaOrmfRT6iA_EiLMccLQ-ThPmYVAOSWiT-XRCemn3xQ.jpeg">
+                <div class="content123">
+                    <p>#HydrateTheFunWay</p>
+                    <h2>KIDS</h2>
+                    <p>
+                      "Make hydration fun with our colorful, kid-friendly water bottles 
+                      – perfect for school and play!"
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="arrows123">
+            <button id="prev123"><</button>
+            <button id="next123">></button>
+        </div>
+        
+        <div class="thumbnail123">
+            <div class="item123 active123">
+                <img src="Assets\Screenshot 2024-07-05 125052.png" alt="Outdoors Image">
+                <div class="content123">
+                    Outdoor
+                </div>
+            </div>
+            <div class="item123">
+                <img src="Assets/D2115_167_993_1200.jpg" alt="Fitness Image">
+                <div class="content123">
+                    Fitness
+                </div>
+            </div>
+            <div class="item123">
+                <img src="Assets/Screenshot 2024-07-01 125402.png" alt="Kids Water Bottles Image">
+                <div class="content123">
+                    Kids
+                </div>
+            </div>
+        </div>
+    </div>
       </div>
-  </section>
+    </section>
   
       <section class="adventures">
-        <img id="adv-main" src="Assets/main.png" alt="lander image" name="mainimage" style="z-index: -1;">
-        <h1>Share your adventures with</h1>
-        <img id="insta-image" src="Assets/Group 1.png" >
-  
-        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-          slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-          coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-          <swiper-slide>
-            <img src="Assets/Screenshot 2024-07-01 152059.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Rectangle 4.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Rectangle 5.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Screenshot 2024-07-01 152019.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Screenshot 2024-07-01 152001.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets//Screenshot 2024-07-01 152045.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Rectangle 3.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="Assets/Screenshot 2024-07-01 152059.png" />
-          </swiper-slide>
+        
+        <img id="adv-main" src="Assets/WhatsApp Image 2024-07-06 at 20.24.09_f8aa9fc7.jpg" alt="lander image" name="mainimage" style="z-index: -1;">
+        
+        <a href="https://www.instagram.com/nalgene/"><img id="insta-image" src="Assets/Group 1.png" ></a>
+
+        <swiper-container class="mySwiper" effect="cards" grab-cursor="true" autoplay="true" autoplay-delay="2000" autoplay-disable-on-interaction="false" loop="true">
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/Screenshot 2024-07-01 152059.png" /></a></swiper-slide>
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/imresizer-1720241708865.jpg" /></a></swiper-slide>
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/imresizer-1720241777755.jpg" /></a></swiper-slide>
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/imresizer-1720246977512.jpg" /></a></swiper-slide>
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/imresizer-1720241823997.jpg" /></a></swiper-slide>
+          <swiper-slide><a href="https://www.instagram.com/nalgene/"><img src="Assets/imresizer-1720246809377.jpg" /></a></swiper-slide>
         </swiper-container>
       </section>
 
       <div class="newsletter-container">
         <div class="newsletter-content">
-            <!-- left part  -->
+            
             <div class="news-left">
                 <img src="Assets/a-well-designed-newsletter-section-for-a-website-f-Ajk6c99pSV2AxyuwBO42RQ-_Lizt-dCSMGQNbuU0pMhoA.jpeg" loading="lazy" alt="news-img"/>
             </div>
-            <!-- right part -->
+            
             <div class="news-right">
 
                 <div class="news-info">
-                    <h2 class="news-title">Get the latest updates</h2>
+                    <h2 class="news-title" style="color: white;">Get the latest updates</h2>
                     
                     <p class="news-desc">Sign up for our newsletter</p>
                 </div>
 
-                <form class="news-form">
-
+                <form class="news-form" style="background-color: black;">
                     <input class="news-email" placeholder="Email" />
                     <button class="news-send-button">
                         Send
@@ -707,7 +638,8 @@
       <div class="footer">
         <div id="footer-a">
           <div id="footer-1">
-            <img src="images/image10.png" />
+            <div class="logoholder" style="display: inline-block;"><img class="logo-img-footer" src="image/file.png"
+              alt="logo"  ></div>
           </div>
           <div id="footer-2">
             <h3>Shop by Use</h3>
@@ -748,7 +680,7 @@
           </div>
           <div id="footer-6">
             <a href="https://www.instagram.com/nalgene/"
-              ><img src="icons/instagram.png"
+              ><img src="icons/instagram (1).png"
             /></a>
             <a href="https://www.youtube.com/channel/UCZtgd80nhpGIgcmyZ07zK7A"
               ><img src="icons/youtube.png"
@@ -779,6 +711,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

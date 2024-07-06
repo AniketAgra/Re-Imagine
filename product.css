@@ -5,7 +5,7 @@
   --card-height: 400px;
   --card-transition-duration: 800ms;
   --card-transition-easing: ease;
-  --bg-gradient-start: #d3f691;
+  --bg-gradient-start: #000000;
   --bg-gradient-end: white;
   --button-size: 50px;
   --button-color: #444;
@@ -114,13 +114,13 @@ button:focus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;
+  z-index: 10;
   background: var(--button-bg);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 300ms;
+  transition:300ms;
 }
 .cardList__btn:hover {
   background: var(--button-hover-bg);
@@ -217,6 +217,7 @@ button:focus {
   width: 100%;
   bottom: 2%;
   pointer-events: none;
+  
 }
 
 .infoList .info__wrapper {
@@ -340,4 +341,38 @@ button:focus {
 }
 .support a:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1200px) {
+  .cardList {
+    width: calc(2 * var(--card-width));
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .infoList {
+    bottom: 5%;
+  }
+  .info .name {
+    font-size: 1.2em;
+  }
+  .info .location {
+    font-size: 1em;
+  }
+  .info .description {
+    font-size: 0.9em;
+  }
+}
+
+/* Image optimization */
+.app__bg__image img {
+  object-fit: cover;
+  max-width: 100%; /* Ensure images scale down appropriately */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Smooth transitions */
+.card {
+  transition: transform var(--card-transition-duration) var(--card-transition-easing),
+              opacity var(--card-transition-duration) var(--card-transition-easing);
 }
