@@ -6,6 +6,10 @@
 
 }
 
+[data-scroll-container] {
+    height: 100%;
+    width: 100%;
+}
 
 ::-webkit-scrollbar {
     width: 12px; 
@@ -43,7 +47,7 @@
 }
 html, body {
     width: 100%;
-    
+    overflow: hidden;
 }
 body {
     overflow-x: hidden;
