@@ -936,7 +936,7 @@ swiper-slide {
 
 
 @media screen and (max-width: 768px) {
-    .swiper-container {
+    swiper-container {
         width: 240px;
         height: 250px;
         top: 30%;
@@ -950,7 +950,7 @@ swiper-slide {
 }
 
 @media screen and (max-width: 480px) {
-    .swiper-container {
+    swiper-container {
         width: 220px;
         height: 215px;
         top: 14%;
