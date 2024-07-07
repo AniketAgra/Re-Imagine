@@ -485,3 +485,6 @@ li:hover ul#accd{
   visibility: hidden;
   display: none;
 }
+.bmnav{
+  padding-right:40px;
+}
