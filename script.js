@@ -1,24 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Define elements
-    let nalgene = document.getElementById('nalgene');
-    let hill1 = document.getElementById('hill1');
-    let hill2 = document.getElementById('hill2');
-    let person = document.getElementById('person');
-    let bottle = document.getElementById('bottle');
-
-    // Scroll event for parallax effect
-    window.addEventListener('scroll', () => {
-        let value = window.scrollY;
-
-        nalgene.style.marginTop = value * -2 + 'px';
-        hill1.style.top = value * 0.3 + 'px';
-        hill2.style.top = value * 0.4 + 'px';
-        person.style.top = value * 0.3 + 'px';
+    // Initialize Locomotive Scroll
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        // Enable smooth scrolling on mobile as well
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
     });
 
-    // GSAP Animations
+    // Update GSAP ScrollTrigger to use Locomotive Scroll
     gsap.registerPlugin(ScrollTrigger);
 
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed"
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+
+    // Your existing GSAP animations
     gsap.to("#bottle1", {
         scale: 18,
         x: 300,
@@ -27,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rotate: 45,
         scrollTrigger: {
             trigger: "#bottle1",
-            scroller: "body",
+            scroller: "[data-scroll-container]", // Use Locomotive Scroll container
             start: "top 80%",
             end: "top 80%",
             scrub: 3,
@@ -41,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 5,
         scrollTrigger: {
             trigger: ".about",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 40%",
             end: "top 40%",
             scrub: 3,
@@ -55,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 5,
         scrollTrigger: {
             trigger: "#why-image",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 80%",
             end: "top 90%",
             scrub: 3,
@@ -68,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "none",
         scrollTrigger: {
             trigger: ".aboutus",
+            scroller: "[data-scroll-container]",
             start: "top top",
             end: "bottom top",
             scrub: true
@@ -81,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 2,
         scrollTrigger: {
             trigger: ".ift1",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 10%",
             scrub: 2,
             pin: true
@@ -94,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 2,
         scrollTrigger: {
             trigger: ".ift2",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 20%",
             scrub: 2
         }
@@ -106,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 2,
         scrollTrigger: {
             trigger: ".ift3",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 20%",
             scrub: 2
         }
@@ -118,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 2,
         scrollTrigger: {
             trigger: ".adventures",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 100%",
             end: "top 60%",
             scrub: 2
@@ -131,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 3,
         scrollTrigger: {
             trigger: ".newsletter-container",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 70%",
             end:"top 70%",
             scrub: 3
@@ -144,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 3,
         scrollTrigger: {
             trigger: ".footer",
-            scroller: "body",
+            scroller: "[data-scroll-container]",
             start: "top 70%",
             end:"top 70%",
             scrub: 2
@@ -195,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlider();
         });
     });
-
 
     const likeBtns = document.querySelectorAll(".like-btn");
 
