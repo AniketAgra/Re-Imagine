@@ -47,7 +47,7 @@
 }
 html, body {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; 
 }
 body {
     overflow-x: hidden;
@@ -66,169 +66,34 @@ header {
     z-index: 100;
 }
 
-/* .parallax {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    height: 100vh;
-    text-align: center; 
-} */
 
+/* Default Styles */
 .parallax {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: radial-gradient(circle,rgb(12, 115, 89)5%, rgba(13,12,12,1)60%);
+    background: radial-gradient(circle, rgb(12, 115, 89) 5%, rgba(13,12,12,1) 60%);
     background-repeat: no-repeat;
 }
-.lite{
+
+.lite {
     width: 90%;
     height: fit-content;
-}
-
-#nalgene {
-    position: absolute;
-    top: 80%;
-    font-size: 11.5em;
-    color: aliceblue;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-}
-
-.parallax img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-}
-
-.empty {
-    height: 35vh;
-    width: 100vw;
-    visibility: hidden;
 }
 
 #def-tab, #def-mob, #celeb-tab, #celeb-mob, #info-mob, #info-tab {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    .parallax {
-        background-image: url('Assets/safeimagekit-Screenshot (1400).png');
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .parallax img {
-        display: none;
-    }
-
-    .parallax h2 {
-        display: none;
-    }
-
-    .empty {
-        display: none;
-    }
-
-    .why {
-        height: 0;
-        width: 0;
-    }
-
-    #def-mob {
-        display: block;
-        color: white;
-        font-size: 3em;
-        margin-top: -60%;
-        padding: 5%;
-    }
-
-    #celeb-mob {
-        display: block;
-        color: white;
-        font-size: 1.5em;
-    }
-
-    #info-mob {
-        display: block;
-        margin: 20%;
-        margin-top: 5%;
-        color: white;
-        font-size: 1.5em;
-    }
-}
-
-@media screen and (max-width: 1028px) {
-    .parallax {
-        background-image: url('Assets/imresizer-1720185708440.jpg');
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .parallax img {
-        display: none;
-    }
-
-    .parallax h2 {
-        display: none;
-    }
-
-    .empty {
-        display: none;
-    }
-
-    #def-mob, #celeb-mob ,#info-mob{
-        display: none;
-    }
-
-    .why{
-        height: 100vh;
-        width: 100vw;
-    }
-
-    #why-image, #about-image{
-        display: none;
-    }
-
-    #def-tab {
-        display: block;
-        color: white;
-        font-size: 5em;
-        margin-top: -30%;
-    }
-
-    #celeb-tab {
-        display: block;
-        color: white;
-        font-size: 3em;
-    }
-
-    #info-tab {
-        display: block;
-        margin: 20%;
-        margin-top: 5%;
-        color: white;
-        font-size: 1.5em;
-    }
-}
-
 
 .aboutus, .why {
     position: relative;
-    /* background-color: #082d36; */
-    background: radial-gradient(circle,rgb(12, 115, 89)5%, rgba(13,12,12,1)60%);
+    background: radial-gradient(circle, rgb(12, 115, 89) 5%, rgba(13,12,12,1) 60%);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
-    height: 99.9vh;
+    height: 100vh;
     overflow: hidden;
     transition: z-index 0.5s ease;
 }
@@ -238,7 +103,7 @@ header {
 }
 
 .why {
-    z-index: 20; 
+    z-index: 20;
     position: absolute;
 }
 
@@ -258,11 +123,16 @@ header {
 }
 
 .about, .why-nalgene {
-    top: 1%;
     width: 50%;
     padding: 4%;
     display: flex;
     flex-direction: column;
+}
+
+.why-nalgene h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .about h2{
@@ -271,14 +141,6 @@ header {
     margin-bottom: 10px;
     text-align: right;
 }
-
-.why-nalgene h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
-    margin-top: 10%;
-}
-
 
 .about p {
     font-size: 1em;
@@ -299,6 +161,7 @@ header {
     padding-right: 27%;
 }
 
+
 .aboutus h2, .why h2 {
     font-family: 'Italiana', serif;
     font-size: 5em;
@@ -312,50 +175,257 @@ header {
     font-weight: 300;
 }
 
+.why h3 {
+    font-weight: 700;
+    color: rgb(223, 223, 223);
+    padding-top: 4%;
+}
+
 .aboutus h3 {
     font-weight: 700;
     color: rgb(223, 223, 223);
-    font-weight: 300;
     padding-top: 4%;
     text-align: right;
-}
-
-.why h3 {
-    font-weight: 700;
-    color: rgb(15, 16, 16);
-    font-weight: 300;
-    padding-top: 4%;
-    
 }
 
 #bottle1 {
     position: absolute;
     height: 4%;
     width: 4%;
-    margin-top: 41%;
-    margin-left: 27.5%;
+    top: 50%;
+    left: 37.5%;
     z-index: 10;
     transform: scaleX(-1);
 }
 
-
-#about-image{
+#about-image, #why-image {
     position: absolute;
     z-index: 110;
-    left: -20%;
-    bottom: 0%;
     height: 70%;
     overflow: hidden;
 }
 
-#why-image {
-    position: absolute;
-    z-index: 110;
-    left: 28%;
-    bottom: 0%;
-    height: 60%;
-    overflow: hidden;
+#about-image {
+    left: -20%;
+    bottom: 0;
 }
+
+#why-image {
+    left: 28%;
+    bottom: 0;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1030px) {
+    .lite {
+        display: none;
+    }
+
+    .parallax {
+        background-image: url('Assets/a-high-quality-nalgene-water-bottle-in-a-vibrant-g-w5Ac7Tk-RNe9h23AGukVyA-daBoNG2-Te6rdgIQJLcY2w.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #def-mob {
+        display: block;
+        color: white;
+        font-size: 4em;
+        font-weight: 900;
+        margin-top: 20%;
+        padding: 5%;
+    }
+
+    #celeb-mob {
+        display: block;
+        color: white;
+        font-size: 3em;
+        font-weight: 600;
+    }
+
+    #info-mob {
+        display: block;
+        margin: 10%;
+        margin-top: 5%;
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #about-image, #why-image {
+        display: none;
+    }
+
+    .video, .why-video {
+        display: none;
+    }
+
+    .about, .why-nalgene {
+        width: 100%;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .lite {
+        display: none;
+    }
+
+    .parallax {
+        background-image: url('Assets/a-high-quality-nalgene-water-bottle-in-a-vibrant-g-w5Ac7Tk-RNe9h23AGukVyA-daBoNG2-Te6rdgIQJLcY2w.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #def-mob, #celeb-mob, #info-mob {
+        display: none;
+    }
+
+    .why {
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .video, .why-video {
+        display: none;
+    }
+
+    .about, .why-nalgene {
+        width: 100%;
+    }
+
+    #def-tab {
+        display: block;
+        color: white;
+        font-size: 3em;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    #celeb-tab {
+        display: block;
+        color: white;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    #info-tab {
+        display: block;
+        margin: 20px;
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #why-image, #about-image {
+        display: none;
+    }
+}
+
+/* Very Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .lite {
+        display: none;
+    }
+
+    .parallax {
+        background-image: url('Assets/a-high-quality-nalgene-water-bottle-in-a-vibrant-g-w5Ac7Tk-RNe9h23AGukVyA-daBoNG2-Te6rdgIQJLcY2w.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #def-mob, #celeb-mob, #info-mob {
+        display: none;
+    }
+
+    .why-nalgene {
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .video, .why-video {
+        display: none;
+    }
+
+    .about, .why-nalgene {
+        width: 100%;
+    }
+
+    #def-tab {
+        display: block;
+        color: white;
+        font-size: 2.5em;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    #celeb-tab {
+        display: block;
+        color: white;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #info-tab {
+        display: block;
+        margin: 10px;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #why-image, #about-image {
+        display: none;
+    }
+
+    .about p {
+        text-align: left;
+        padding-left: 0%;
+    }
+
+    .why-nalgene p {
+        padding-right: 0%;
+    }
+
+    .why-nalgene h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    
+    .about h2{
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .aboutus h3 {
+        font-weight: 700;
+        padding-top: 4%;
+        text-align: left;
+    }
+}
+
 
 .sells{
     background: radial-gradient(circle,rgb(12, 115, 89)5%, rgba(13,12,12,1)60%);
@@ -489,6 +559,7 @@ header {
     padding: 3px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    z-index: 1001;
 }
 
 .like-btn:hover{
@@ -863,24 +934,33 @@ swiper-slide {
     left: -135%;
 }
 
+
 @media screen and (max-width: 768px) {
-    .adventures h1 {
-        font-size: 3em; 
-        margin-top: 10vh;
-        margin-bottom: 27%;
+    .swiper-container {
+        width: 240px;
+        height: 250px;
+        top: 30%;
+        left: -2%; 
     }
 
     #insta-image {
-        position: absolute;
-        justify-content: center; 
-        align-items: center; 
-        margin-bottom: 50%;
+        max-width: 100px; 
+        max-height: 100px;
     }
-    swiper-container {
-        width: 80%;
-        padding-top: 25%;
-        padding-bottom: 50px;
-      }
+}
+
+@media screen and (max-width: 480px) {
+    .swiper-container {
+        width: 220px;
+        height: 215px;
+        top: 14%;
+        left: -35%; 
+    }
+
+    #insta-image {
+        max-width: 80px; /* Smaller size for very small screens */
+        max-height: 80px;
+    }
 }
 
 
@@ -1248,5 +1328,4 @@ swiper-slide {
         font-size: 0.9em;
     }
 }
-
   
